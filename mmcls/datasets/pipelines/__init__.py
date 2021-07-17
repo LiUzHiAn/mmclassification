@@ -7,8 +7,11 @@ from .formating import (Collect, ImageToTensor, ToNumpy, ToPIL, ToTensor,
                         Transpose, to_tensor)
 from .loading import LoadImageFromFile
 from .transforms import (CenterCrop, ColorJitter, Lighting, RandomCrop,
-                         RandomErasing, RandomFlip, RandomGrayscale,
+                         RandomErasing, RandomFlip, RandomGrayscale, Normalize,
                          RandomResizedCrop, Resize)
+
+from .loading_npy import LoadEmbeddingFromFile
+from .my_collect import MyCollect
 
 __all__ = [
     'Compose', 'to_tensor', 'ToTensor', 'ImageToTensor', 'ToPIL', 'ToNumpy',
@@ -17,5 +20,6 @@ __all__ = [
     'RandomGrayscale', 'Shear', 'Translate', 'Rotate', 'Invert',
     'ColorTransform', 'Solarize', 'Posterize', 'AutoContrast', 'Equalize',
     'Contrast', 'Brightness', 'Sharpness', 'AutoAugment', 'SolarizeAdd',
-    'Cutout', 'RandAugment', 'Lighting', 'ColorJitter', 'RandomErasing'
+    'Cutout', 'RandAugment', 'Lighting', 'ColorJitter', 'RandomErasing',
+    'LoadEmbeddingFromFile'
 ]

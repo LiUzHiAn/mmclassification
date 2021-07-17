@@ -14,9 +14,10 @@ from .shufflenet_v2 import ShuffleNetV2
 from .swin_transformer import SwinTransformer
 from .vgg import VGG
 from .vision_transformer import VisionTransformer
+from .word_emb_backbone import WordEmbeddingBackbone
 
 __all__ = [
-    'LeNet5', 'AlexNet', 'VGG', 'RegNet', 'ResNet', 'ResNeXt', 'ResNetV1d',
+    'LeNet5', 'AlexNet', 'VGG', 'RegNet', 'ResNet', 'ResNeXt', 'ResNetV1d', 'WordEmbeddingBackbone',
     'ResNeSt', 'ResNet_CIFAR', 'SEResNet', 'SEResNeXt', 'ShuffleNetV1',
     'ShuffleNetV2', 'MobileNetV2', 'MobileNetV3', 'VisionTransformer',
     'SwinTransformer'

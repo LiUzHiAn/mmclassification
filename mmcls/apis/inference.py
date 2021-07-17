@@ -84,7 +84,7 @@ def inference_model(model, img):
         scores = model(return_loss=False, **data)
         pred_score = np.max(scores, axis=1)[0]
         pred_label = np.argmax(scores, axis=1)[0]
-        result = {'pred_label': pred_label, 'pred_score': float(pred_score)}
+        result = {'pred_label': pred_label, 'pred_score': float(pred_score), 'raw_scores': scores[0]}
     result['pred_class'] = model.CLASSES[result['pred_label']]
     return result
 
