@@ -355,7 +355,7 @@ class ImageWordEmbeddingClassifier(BaseModule, metaclass=ABCMeta):
         else:
             raise NotImplementedError('aug_test has not been implemented')
 
-    def simple_test(self, img, emb):
+    def simple_test(self, img, emb, **kwargs):
         """Test without augmentation."""
         x = self.extract_feat(img, emb)
         x_dims = len(x.shape)

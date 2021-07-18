@@ -78,7 +78,22 @@ def run_test():
         meta=dict())
 
 
+def swin_transformer_test():
+    from mmcls.models import SwinTransformer
+    import torch
+
+    extra_config = dict(arch='tiny',
+                        stage_cfgs=dict(downsample_cfg={'kernel_size': 3,
+                                                        'expansion_ratio': 3}),
+                        auto_pad=True)
+    self = SwinTransformer(**extra_config)
+    inputs = torch.rand(1, 3, 224, 224)
+    output = self.forward(inputs)
+    print(output.shape)
+
+
 if __name__ == '__main__':
-    run_test()
+    # run_test()
     # model_test()
     # dataset_test()
+    swin_transformer_test()

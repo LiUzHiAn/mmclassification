@@ -50,7 +50,7 @@ def build_dataloader(dataset,
                      round_up=True,
                      seed=None,
                      pin_memory=True,
-                     persistent_workers=True,
+                     persistent_workers=False,
                      **kwargs):
     """Build PyTorch DataLoader.
 

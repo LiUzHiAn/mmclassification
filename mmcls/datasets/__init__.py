@@ -10,10 +10,11 @@ from .samplers import DistributedSampler
 from .voc import VOC
 from .pipelines.compose import Compose
 from .word_emb_dataset import WordEmbeddingDataset, ImageWordEmbeddingDataset
+from .kdxf_dataset import KDXFDataset
 
 __all__ = [
     'BaseDataset', 'ImageNet', 'CIFAR10', 'CIFAR100', 'MNIST', 'FashionMNIST', 'WordEmbeddingDataset',
-    'ImageWordEmbeddingDataset',
+    'ImageWordEmbeddingDataset', 'KDXFDataset',
     'VOC', 'MultiLabelDataset', 'build_dataloader', 'build_dataset', 'Compose',
     'DistributedSampler', 'ConcatDataset', 'RepeatDataset',
     'ClassBalancedDataset', 'DATASETS', 'PIPELINES'
