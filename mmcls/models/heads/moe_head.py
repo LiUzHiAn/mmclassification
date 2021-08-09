@@ -98,7 +98,7 @@ class MoEClsHead(ClsHead):
             gating = self.se_gating(feats_hidden)
             feats_hidden = feats_hidden * gating
 
-        expert_logits = self.expert_fc(feats_hidden).view(-1, self.n_classes, self.num_mixtures)
+        expert_logits = self.expert_fc(feats_hidden).view(-1, self.num_classes, self.num_mixtures)
         if self.per_class:
             expert_distributions = F.softmax(
                 self.gating_fc(feats_hidden).view(
