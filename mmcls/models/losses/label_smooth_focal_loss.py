@@ -174,7 +174,7 @@ class LabelSmoothFocalLoss(nn.Module):
         w = alpha.view(-1, self.num_classes) * torch.pow((1 - pt), self.gamma)
 
         # 交叉熵
-        loss = -smoothed_label * torch.log(pt)
+        loss = - w * torch.log(pt)
         loss = loss.sum(dim=-1)
 
         # apply weights and do the reduction
